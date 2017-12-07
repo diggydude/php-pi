@@ -45,7 +45,7 @@
     public function digitalRead($pin)
     {
       $command = self::WIRING_PI . " read " . $pin;
-      return shell_exec($command); 
+      return (int) shell_exec($command); 
     } // digitalRead
 
     public function i2cWrite($address, $register, $value)
