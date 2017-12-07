@@ -1,5 +1,5 @@
 
-             An Internet of Things (IoT) Framework in PHP
+                 A PHP Wrapper for WiringPi and I2C
 
                     Copyright 2017 James Elkins
 
