@@ -59,7 +59,7 @@
       if (stripos((string) $value, '0x') !== 0) {
         $value = "0x" . dechex($value);
       }
-      $command = self::I2C_SET . $address . " " . $register . " " . $value;
+      $command = self::I2C_SET . " " . $address . " " . $register . " " . $value;
       return shell_exec($command);
     } // i2cWrite
 
@@ -71,7 +71,7 @@
       if (stripos((string) $register, '0x') !== 0) {
         $register = "0x" . dechex($register);
       }
-      $command = self::I2C_GET . $address . " " . $register;
+      $command = self::I2C_GET . " " . $address . " " . $register;
       $result  = shell_exec($command);
       if (stripos($result, '0x') === 0) {
         $result = hexdec(preg_replace('/[^0-9A-Fa-f]/', '', $result));
